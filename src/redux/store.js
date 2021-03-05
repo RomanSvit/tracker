@@ -1,8 +1,11 @@
-import { createStore } from "redux";
-import { devToolsEnhancer } from "redux-devtools-extension";
+import { createStore, applyMiddleware } from "redux";
+import { composeWithDevTools } from "redux-devtools-extension";
+import thunk from "redux-thunk";
+import logger from "redux-logger";
 import { reducer } from "./reducer";
 
-const enhancer = devToolsEnhancer();
-const store = createStore(reducer, enhancer);
-
+const store = createStore(
+  reducer,
+  composeWithDevTools(applyMiddleware(thunk, logger))
+);
 export default store;

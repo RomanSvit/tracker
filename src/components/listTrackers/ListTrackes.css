@@ -1,0 +1,40 @@
+.list-tracks {
+  list-style: none;
+  width: 400px;
+  /* padding: 2px 2px; */
+  
+}
+.list-tracks-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 50px;
+  margin-bottom: 8px;
+}
+.block-btn {
+  display: flex;
+}
+.btn-track {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.btn-track:hover {
+  transform: scale(1.1);
+}
+.stoptimer {
+  background-image: url("../../images/pause2x.png");
+}
+.playtimer {
+  background-image: url("../../images/play.png");
+}
+.del {
+  background-image: url("../../images/remove_circle_outline-black-36dp.svg");
+}
