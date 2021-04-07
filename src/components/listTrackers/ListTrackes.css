@@ -24,7 +24,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 .btn-track:hover {
   transform: scale(1.1);

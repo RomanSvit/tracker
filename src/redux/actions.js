@@ -3,8 +3,8 @@ export const Type = {
   ADD_TRACKER: "ADD_TRACKER",
   DEL_TRACKER: "DEL_TRACKER",
   PAUSE_TRACKER: "PAUSE_TRACKER",
+  PLAY_TRACKER:"PLAY_TRACKER",
   RUN_TIMER: "RUN_TIMER",
-  // SET_YOUR_INTERVAL: "SET_YOUR_INTERVAL",
 };
 
 export const addTracker = (item) => ({
@@ -19,12 +19,13 @@ export const stopTracker = (e) => ({
   type: Type.PAUSE_TRACKER,
   payload: e.target.parentElement.parentElement.id,
 });
+export const playTracker = (e) => ({
+  type: Type.PLAY_TRACKER,
+  payload: e.target.parentElement.parentElement.id,
+});
 export const getTrackersList = (trackers) => ({
   type: Type.GET_TRACKERS_LIST,
   payload: trackers,
 });
-export const timerRun = (item) => ({
-  type: Type.RUN_TIMER,
-  payload:item,
-});
+
 
